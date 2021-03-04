@@ -14,9 +14,7 @@ int main(int argc, char **argv){
   int check=0;
 
 
-  for(i=1;i<argc;i++){// each argument
-    //printf("%s\n",argv[i]);
-    //printf("%ld\n",strlen(argv[i]));
+  for(i=1;i<argc;i++){
      for(j=0;j<strlen(argv[i]);j++){
        /* Use stack to help with the parentheses*/
         if(argv[i][j] == '[' || argv[i][j] == '{'){
@@ -47,11 +45,9 @@ int main(int argc, char **argv){
       
      }
 if(s.size>0 || check != 0){
-        //printf("%d ..\n",s.size);
          printf("The parenthses do not match for %s \n", argv[i]);
          pop_all(&s);
        }else{
-        // printf("%d ..\n",s.size);
          printf("The parenthses match successfully for %s \n", argv[i]);
        }
 
@@ -59,18 +55,3 @@ if(s.size>0 || check != 0){
 
    return 0;
 }
-
-
- /*switch(argv[i][j]){
-         case '[':
-            break;
-         case '{':
-            push(&s, argv[i][j]);
-            break;
-         case ']':
-            
-            break;
-         case '}':
-            pop(&s);
-            break;
-       }*/ 

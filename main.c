@@ -57,11 +57,9 @@ if(s.size>0 || check != 0){
 
   }
 
-
-
-
    return 0;
 }
+
 
  /*switch(argv[i][j]){
          case '[':

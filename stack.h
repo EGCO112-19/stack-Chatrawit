@@ -31,7 +31,7 @@ char pop(StackPtr s){
   value = t->data; //get data inside the box b4 delete
   s->top = t->nextPtr; //change top pointer to next box
   free(t);
-  s->size =0;
+  s->size = 0;
   return value;
 }
 
